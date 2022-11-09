@@ -12,5 +12,5 @@ def generate_link_list(objs: Any) -> LinkList:
 if __name__=='__main__':
     objs = random.sample(range(1, 20), 10)
     link_list = generate_link_list(objs=objs)
-    link_list.print_link_list()
+    print(link_list)
     

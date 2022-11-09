@@ -1,13 +1,15 @@
 from node import Node
-
-class LinkList:
+from list_interface import ListInterface
+class LinkList(ListInterface):
     def __init__(self, head: Node) -> None:
         self.__head = head
     
-    def print_link_list(self):
+    def __str__(self) -> None:
         cur = self.__head
-
+        rpr = "Linked list: "
         while cur is not None:
-            print(cur.get_value(),"->",end=' ')
+            rpr += str(cur.get_value())+" -> "
             cur = cur.get_next()
-        print(None)
+        rpr += "None"
+
+        return rpr
