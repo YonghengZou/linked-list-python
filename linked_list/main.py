@@ -1,5 +1,4 @@
 from typing import Any
-from node import Node
 from link_list import LinkList
 import random
 
