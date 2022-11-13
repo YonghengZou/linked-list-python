@@ -1,6 +1,11 @@
 # linked-list-python
 Linked list implenmentation via Python. 
 
+Command line to run the module
+```
+python3 -m linked-list-python
+```
+
 ## Class Node
 The following fields and functions are included within the Node class.
 ### Field
