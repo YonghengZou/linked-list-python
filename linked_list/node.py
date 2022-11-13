@@ -3,9 +3,10 @@ from typing import Any, Optional
 
 class Node:
     
-    def __init__(self, value: Any, next=None) -> None:
+    def __init__(self, value: Any = None, 
+                        next: 'Node' = None) -> None:
         self.__value = value
-        self.__next = next
+        self._next = next
 
     def set_value(self, value: Any):
         self.__value = value
@@ -14,7 +15,8 @@ class Node:
         return self.__value
     
     def set_next(self, next: 'Node'):
-        self.__next = next
+        self._next = next
 
     def get_next(self):
-        return self.__next
+        return self._next
+    

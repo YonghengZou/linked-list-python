@@ -14,5 +14,5 @@ class ListInterface():
     def get_size():
         pass
 
-    def inser_at():
+    def insert_at():
         pass
