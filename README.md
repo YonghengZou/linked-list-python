@@ -26,4 +26,6 @@ The following fields and functions are included within the LinkedList class.
 4. remove_back()
 5. get_size()
 6. insert_at()
+7. is_empty()
+8. get_node()
 

@@ -1,11 +1,23 @@
 from linked_list.node import Node
 from linked_list.list_interface import ListInterface
-
+from linked_list.empty_exception import EmptyException
 class LinkList(ListInterface):
     def __init__(self) -> None:
         self.__head = None
         self.__tail = None
         self.__size = 0
+
+    def get_node(self, index):
+        if self.is_empty():
+            raise EmptyException("emp")
+        if index>self.get_size()-1:
+            raise Exception("index bigger than max_index of the linklist")
+        cur = self.__head
+
+        while (index):
+            cur = cur._next
+            index -= 1
+        return cur.get_value()
 
     def add_front(self, val):
         node = Node(val)
@@ -47,7 +59,7 @@ class LinkList(ListInterface):
     
     def remove_front(self):
         if self.get_size()==0:
-            raise Exception("Empty")
+            raise EmptyException("Empty")
         if self.__size==1:
             temp = self.__head.get_value()
             self.__head = None
@@ -80,7 +92,9 @@ class LinkList(ListInterface):
     def get_size(self):
         return self.__size
         
-    
+    def is_empty(self):
+        return self.get_size() == 0
+
     def __str__(self) -> None:
         cur = self.__head
         rpr = "Linked list: "

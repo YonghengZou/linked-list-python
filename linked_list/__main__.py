@@ -16,6 +16,7 @@ if __name__=='__main__':
     link_list.add_back(1)
     link_list.add_front(2)
     link_list.insert_at(2,100)
+    link_list.add_back(3)
     # try:
     #     link_list.remove_front()
     #     print(link_list.get_size())
@@ -29,5 +30,5 @@ if __name__=='__main__':
     
     print(link_list)
     print(link_list.get_size())
-
+    print(link_list.get_node(1))
     
