@@ -1,5 +1,5 @@
 from typing import Any
-from linked_list.link_list import LinkList
+from .linked_list.link_list import LinkList
 import random
 
 def generate_link_list(objs: Any) -> LinkList:
@@ -10,6 +10,7 @@ def generate_link_list(objs: Any) -> LinkList:
         link_list.add_back(i)
     return link_list
 
+# main file for testing linked list module
 if __name__=='__main__':
     objs = random.sample(range(1, 20), 10)
     link_list = LinkList()

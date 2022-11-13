@@ -1,6 +1,6 @@
-from linked_list.node import Node
-from linked_list.list_interface import ListInterface
-from linked_list.empty_exception import EmptyException
+from .node import Node
+from .list_interface import ListInterface
+from ..exceptions.exceptions import EmptyException, IndexOutOfBound
 class LinkList(ListInterface):
     def __init__(self) -> None:
         self.__head = None
@@ -11,7 +11,7 @@ class LinkList(ListInterface):
         if self.is_empty():
             raise EmptyException("emp")
         if index>self.get_size()-1:
-            raise Exception("index bigger than max_index of the linklist")
+            raise IndexOutOfBound("index bigger than max_index of the linklist")
         cur = self.__head
 
         while (index):
@@ -73,7 +73,7 @@ class LinkList(ListInterface):
     
     def remove_back(self):
         if self.get_size()==0:
-            raise Exception("Empty")
+            raise EmptyException("Empty")
         if self.__size==1:
             temp = self.__head.get_value()
             self.__head = None

@@ -1,2 +1,0 @@
-class EmptyException(Exception):
-    pass
