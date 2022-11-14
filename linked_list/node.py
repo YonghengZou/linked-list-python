@@ -1,5 +1,5 @@
-from typing import Any, Optional
-# from link_list import Node
+from typing import Any
+
 
 class Node:
     
@@ -8,15 +8,15 @@ class Node:
         self.__value = value
         self._next = next
 
-    def set_value(self, value: Any):
+    def set_value(self, value: Any) -> None:
         self.__value = value
     
-    def get_value(self):
+    def get_value(self) -> None:
         return self.__value
     
-    def set_next(self, next: 'Node'):
+    def set_next(self, next: 'Node') -> None:
         self._next = next
 
-    def get_next(self):
+    def get_next(self) -> None:
         return self._next
     

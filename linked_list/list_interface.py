@@ -16,3 +16,6 @@ class ListInterface():
 
     def insert_at():
         pass
+
+    def update_val():
+        pass
