@@ -31,9 +31,9 @@ The following fields and functions are included within the LinkedList class.
 2. add_front()
 3. remove_front()
 4. remove_back()
-5. update_val()
-6. get_size()
-7. insert_at()
+5. insert_at()
+6. update_val()
+7. get_size()
 8. is_empty()
 9. get_node()
 
